@@ -9,7 +9,7 @@ const StarshipCard = ({ ...props }) => {
   return (
 
     <Slide
-      media={<img src={ props.error ?  Confused : StarshipImage} alt='' width = '98%' height='100%' style={{ paddingTop: '15px', objectFit: 'cover' }} />}
+      media={<img src={ props.error ?  Confused : StarshipImage} alt={props.name} width = '98%' height='100%' style={{ paddingTop: '15px', objectFit: 'cover' }} />}
       mediaBackgroundStyle={{ backgroundColor: blue[600] }}
       style={{ backgroundColor: blue[600] }}
       title={props.name}
