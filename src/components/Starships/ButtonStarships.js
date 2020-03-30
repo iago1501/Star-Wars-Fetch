@@ -20,10 +20,10 @@ const ButtonStarships = ({ ...props }) => {
   const { results } = useSelector(state => state.starships)
   const dispatch = useDispatch()
 
-  function getStarshipsInfo (starships) {
-    dispatch(fetchStarships(starships))
-    setCount(true)
+  function getStarshipsInfo (starships) {     
+    dispatch( fetchStarships(starships)).then(() => setCount(true))    
   }
+  
   return (
     <>
       {(props.starships.length > 0)

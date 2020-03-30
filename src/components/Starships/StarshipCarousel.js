@@ -2,7 +2,7 @@ import React from 'react'
 import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import StarshipCard from './StarshipCard'
 
-const StarshipCarousel = ({ open, onClose, starships }) => {
+const StarshipCarousel = ({ open, onClose, starships }) => {  
   return (
     <AutoRotatingCarousel
       label='Close'
@@ -17,5 +17,9 @@ const StarshipCarousel = ({ open, onClose, starships }) => {
     </AutoRotatingCarousel>
   )
 }
+
+StarshipCarousel.defaultProps = {  
+  starships: [],
+};
 
 export default StarshipCarousel
