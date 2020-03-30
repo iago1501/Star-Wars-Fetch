@@ -10,7 +10,7 @@ A paginação foi resolvida com um lazy load <br/>
 Para gerenciar estados foram adotados técnicas de react hooks + redux <br/>
 O padrão de projetos adotados para o redux foi o duck pattern <br/>
 
-## Available Scripts
+## Scripts
 
 Para rodar o projeto basta executar o comando:
 
