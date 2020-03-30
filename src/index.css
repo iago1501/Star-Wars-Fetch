@@ -15,5 +15,31 @@ code {
 
 @font-face {
   font-family: 'StarWars';
-  src: local('StarWars'), url(./fonts/Starjedi.ttf) format('truetype');
+  src: local('StarWars'), url(assets/fonts/Starjedi.ttf) format('truetype');
 }
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+	border-radius: 10px;
+	background-color: #CCCCCC;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #000;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #D62929;
+	background-image: -webkit-linear-gradient(90deg,
+											  transparent,
+											  rgba(0, 0, 0, 0.4) 50%,
+											  transparent,
+											  transparent)
+}
+
+

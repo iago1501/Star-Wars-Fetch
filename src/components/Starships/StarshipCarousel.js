@@ -2,22 +2,20 @@ import React from 'react'
 import { AutoRotatingCarousel } from 'material-auto-rotating-carousel'
 import StarshipCard from './StarshipCard'
 
+const StarshipCarousel = ({ open, onClose, starships }) => {
+  return (
+    <AutoRotatingCarousel
+      label='Close'
+      open={open}
+      onClose={onClose}
+      onStart={onClose}
+      autoplay={false}
+      style={{ width: '90%' }}
+    >
+      {starships.map((starship, idx) => <StarshipCard key = {idx} {...starship.data} />)}
 
-const StarshipCarousel = ({open, onClose, starships}) => {
-
-
- return (
-  <AutoRotatingCarousel    
-    label='Close'
-    open={open}
-    onClose={onClose}
-    onStart={onClose}
-    autoplay = {false}
-  >    
-  {starships.map(starship => <StarshipCard {...starship.data} />)}    
-  
-  </AutoRotatingCarousel >
- ) 
+    </AutoRotatingCarousel>
+  )
 }
 
 export default StarshipCarousel
