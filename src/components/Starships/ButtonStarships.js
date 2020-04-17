@@ -35,8 +35,8 @@ const ButtonStarships = ({ ...props }) => {
 
   return (
     <>
-      {(props.starships.length > 0)
-        ? <>
+      {(props.starships.length > 0) ?
+         <>
           {load ? 
             <div className={classes.circle}>
               <CircularProgress
@@ -50,13 +50,14 @@ const ButtonStarships = ({ ...props }) => {
               <StarshipCarousel open={open} onClose={() => setCount(false)} starships={results} />
             </>
           }                    
-          </>
+        </>
         : 
         <Tooltip title="This char doesn't have any starship" placement='right'>
           <span>
             <Button variant='outlined' disabled>{props.children}</Button>
           </span>
-          </Tooltip>}
+        </Tooltip>
+      }
 
     </>
   )
